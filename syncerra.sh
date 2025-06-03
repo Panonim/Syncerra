@@ -82,7 +82,11 @@ case "$1" in
             echo -e "${RED}Error: Key '$appname' already exists in $JSON_FILE.${RESET}"
             exit 1
         fi
-
+        # Ensure JSON file exists; if not, create it
+        if [[ ! -f "$JSON_FILE" ]]; then
+            mkdir -p "$(dirname "$JSON_FILE")"
+            echo '{}' > "$JSON_FILE"
+        fi
         # Prompt for local filename or folder to be synced
         read -rp "Enter local file/folder name to create inside app folder: " localfile
         local_path="$APP_FOLDER/$localfile"
