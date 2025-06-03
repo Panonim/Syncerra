@@ -1,4 +1,4 @@
-<img src="/source/Syncerra_Logo.png" width="100px" alt="Syncerra Logo">
+<img src="/source/Syncerra_Logo.png" width="150px" alt="Syncerra Logo">
 # ⚡ Syncerra
 
 A blazing-fast local-to-system sync utility powered by Bash and JSON metadata. Designed for developers who care about precision, clarity, and automation.
